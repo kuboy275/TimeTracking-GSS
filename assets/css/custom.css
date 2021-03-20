@@ -1,0 +1,11 @@
+.content .title {
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.content table thead tr th,
+.content table tbody tr td {
+    vertical-align: middle;
+    text-align: center;
+}

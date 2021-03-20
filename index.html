@@ -1,67 +1,560 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- STYLES CSS -->
-        <link rel="stylesheet" href="assets/css/styles.css">
 
-        <!-- BOX ICONS CSS-->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-        <title>Sidebar menu</title>
-    </head>
-    <body id="body">
-        <div class="l-navbar" id="navbar">
-            <nav class="nav">
-                <div>
-                    <a href="#" class="nav__logo">
-                        <img src="assets/icons/logo.svg" alt="" class="nav__logo-icon">
-                        <span class="nav__logo-text">Bedimcode</span>
-                    </a>
-    
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class='bx bx-chevron-right'></i>
-                    </div>
-    
-                    <ul class="nav__list">
-                        <a href="#" class="nav__link active">
-                            <i class='bx bx-grid-alt nav__icon'></i>
-                            <span class="nav__text">Home</span>
-                        </a>
-                        <a href="#" class="nav__link">
-                            <i class='bx bx-user nav__icon' ></i>
-                            <span class="nav__text">User</span>
-                        </a>
-                        <a href="#" class="nav__link">
-                            <i class='bx bx-bell nav__icon' ></i>
-                            <span class="nav__text">Notification</span>
-                        </a>
-                        <a href="#" class="nav__link">
-                            <i class='bx bx-heart nav__icon'></i>
-                            <span class="nav__text">Favorites</span>
-                        </a>
-                        <a href="#" class="nav__link">
-                            <i class='bx bx-bookmark nav__icon'></i>
-                            <span class="nav__text">Saved</span>
-                        </a>
-                        <a href="#" class="nav__link">
-                            <i class='bx bx-message-rounded nav__icon' ></i>
-                            <span class="nav__text">Chat</span>
-                        </a>                 
-                    </ul>
-                </div>
-                <a href="#" class="nav__link">           
-                    <i class='bx bx-log-out-circle nav__icon'></i>
-                    <span class="nav__text">Close</span>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- STYLES CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <!-- link bt -->
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- BOX ICONS CSS-->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <title>Sidebar menu</title>
+</head>
+
+<body id="body">
+    <div class="l-navbar" id="navbar">
+        <nav class="nav">
+            <div>
+                <a href="#" class="nav__logo">
+                    <img src="assets/icons/logo.svg" alt="" class="nav__logo-icon">
+                    <span class="nav__logo-text">Bedimcode</span>
                 </a>
-            </nav>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-chevron-right'></i>
+                </div>
+
+                <ul class="nav__list">
+                    <a href="#" class="nav__link active">
+                        <i class='bx bx-grid-alt nav__icon'></i>
+                        <span class="nav__text">Số Ngày Nghỉ</span>
+                    </a>
+                    <a href="#" class="nav__link">
+                        <i class='bx bx-user nav__icon'></i>
+                        <span class="nav__text">User</span>
+                    </a>
+                    <a href="#" class="nav__link">
+                        <i class='bx bx-bell nav__icon'></i>
+                        <span class="nav__text">Notification</span>
+                    </a>
+                    <a href="#" class="nav__link">
+                        <i class='bx bx-heart nav__icon'></i>
+                        <span class="nav__text">Favorites</span>
+                    </a>
+                    <a href="#" class="nav__link">
+                        <i class='bx bx-bookmark nav__icon'></i>
+                        <span class="nav__text">Saved</span>
+                    </a>
+                    <a href="#" class="nav__link">
+                        <i class='bx bx-message-rounded nav__icon'></i>
+                        <span class="nav__text">Chat</span>
+                    </a>
+                </ul>
+            </div>
+            <a href="#" class="nav__link">
+                <i class='bx bx-log-out-circle nav__icon'></i>
+                <span class="nav__text">Close</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+        <div class="container-fluid">
+            <div class="title">
+                Tổng Hợp Số Ngày Nghỉ
+            </div>
+
+
+            <div class="row align-items-baseline">
+                <div class="col-4">
+                    <div class="form-group">
+                        <select id="inputStatus" class="form-control custom-select">
+                                <option selected="" disabled="">Chọn đơn vị, bộ phận</option>
+                                <option>5- Công ty cổ phần đầu tư GSS</option>
+                                <option>4- Công ty cổ phần đầu tư GSS</option>
+                                <option>3- Công ty cổ phần đầu tư GSS</option>
+                            </select>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <select id="year" class="form-control custom-select">
+                                <option value="2021" selected >Năm 2021</option>
+                                <option value="2020" >Năm 2020</option>
+                                <option value="2019">Năm 2019</option>
+                            </select>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="input-group border rounded">
+                        <div class="input-group input-group-sm">
+                            <input class="form-control form-control-navbar" placeholder="Search họ tên nếu có">
+                            <div class="input-group-append">
+                                <button class="btn btn-navbar" type="submit">
+                                        <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-9 text-right">
+                    <div class="card-tools">
+                        <ul class="pagination pagination-sm align-items-center justify-content-end">
+                            <li class="page-item">
+                                <a href="#" class="btn btn-light blue text-dark">
+                                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li class="page-item mx-2">
+                                <a href="#" class="btn">Page 1</a>
+                            </li>
+                            <li class="page-item">
+                                <a href="#" class="btn bg-light text-dark">
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-3 text-right">
+                    <!-- BUTTON CLICK MODAL -->
+                    <a href="#" class="btn btn-light" data-toggle="modal" data-target="#modal-sm">
+                        <i class="fas fa-plus mr-1"></i> Tạo bảng tổng hợp nghỉ phép
+                    </a>
+
+                    <!-- MODAL CONTENT CREATE START -->
+                    <div class="modal fade show" id="modal-sm" aria-modal="true" role="dialog">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Bảng tổng hợp nghỉ phép</h4>
+                                </div>
+                                <form action="" method="">
+                                    <div class="modal-body">
+                                        <div class="form-group text-left">
+                                            <label class="">Chọn năm</label>
+                                            <select class="form-control ">
+                                                <option selected="" disabled>Chọn năm</option>
+                                                <option>2020</option>
+                                                <option>2022</option>
+                                                <option>2021</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer justify-content-between">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                                            <i class="fas fa-times"></i> Close
+                                        </button>
+                                        <button type="button" class="btn btn-primary">
+                                            <i class="fas fa-share-square"></i> Save changes
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- MODAL CONTENT CREATE END -->
+                </div>
+            </div>
+            <!-- TABLE -->
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-bordered table-hover">
+
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>MA NV</th>
+                                <th>Name</th>
+                                <th>Vị trí</th>
+                                <th>Tổng số ngày phép</th>
+                                <th>Số ngày đã nghỉ</th>
+
+                                <th>Còn lại</th>
+                                <th>Nghỉ không lương</th>
+                                <th>Thử việc</th>
+                                <th>
+                                    <a href="#" class="btn btn-info d-flex align-items-center">
+                                        <i class="fa fa-plus mr-1" aria-hidden="true"></i> Thêm
+                                    </a>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="data" id="2021">
+                            <tr>
+                                <td>1</td>
+                                <td>A09</td>
+                                <td>
+                                    <span class="text-dark font-weight-bold">Show year 2021</span>
+                                </td>
+                                <td>Technology Infomation</td>
+                                <td class="text-info">29.0</td>
+                                <td class="text-danger">3.0</td>
+                                <td class="text-success">28.0</td>
+                                <td class="text-primary">2.0</td>
+                                <td>
+                                    <a href="#" class="btn">
+                                        <i class="fa fa-times text-danger" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+                                <td class="d-flex">
+                                    <!-- CLICK MODAL EDIT -->
+                                    <a href="#" class="btn btn-success" data-toggle="modal" data-target="#modal-info">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </a>
+                                    <!-- MODAL EDIT START -->
+                                    <div class="modal fade" id="modal-info" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content bg-info">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Chỉnh sửa thông tin nghỉ phép
+                                                    </h4>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">×</span>
+                                                    </button>
+                                                </div>
+                                                <form action="" method="post">
+                                                    <div class="modal-body">
+                                                        <div class="form-group row">
+                                                            <label for="inputEmail3" class="col-sm-3 col-form-label">Chọn
+                                                                năm</label>
+                                                            <div class="col-sm-9">
+                                                                <select class="form-control">
+                                                                    <option>2020</option>
+                                                                    <option>2022</option>
+                                                                    <option>2021</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="inputEmail3" class="col-sm-3 col-form-label">Chọn
+                                                                nhân
+                                                                sự</label>
+                                                            <div class="col-sm-9">
+                                                                <select class="form-control">
+                                                                    <option>Trần Văn A - Developer
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="inputEmail3" class="col-sm-3 col-form-label">Chọn
+                                                                nhân
+                                                                sự</label>
+                                                            <div class="col-sm-9">
+                                                                <input type="text" class="form-control" value="18.0">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer justify-content-between">
+                                                        <button type="button" class="btn btn-outline-light" data-dismiss="modal">
+                                                            <i class="fas fa-times"></i> Close
+                                                        </button>
+                                                        <button type="submit" class="btn btn-outline-light">
+                                                            <i class="fas fa-share-square"></i> Save
+                                                            changes
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <!-- /.modal-content -->
+                                        </div>
+                                        <!-- /.modal-dialog -->
+                                    </div>
+                                    <!-- MODAL EDIT END -->
+                                    <a href="#" class="btn btn-danger ml-2">
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>A09</td>
+                                <td>
+                                    <span class="text-dark font-weight-bold">Show year 2021</span>
+                                </td>
+                                <td>Technology Infomation</td>
+                                <td class="text-info">29.0</td>
+                                <td class="text-danger">3.0</td>
+                                <td class="text-success">28.0</td>
+                                <td class="text-primary">2.0</td>
+                                <td>
+                                    <a href="#" class="btn">
+                                        <i class="fa fa-times text-danger" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+                                <td class="d-flex ">
+                                    <!-- CLICK MODAL EDIT -->
+                                    <a href="#" class="btn btn-success" data-toggle="modal" data-target="#modal-info">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </a>
+                                    <!-- MODAL EDIT START -->
+                                    <div class="modal fade" id="modal-info" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content bg-info">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Chỉnh sửa thông tin nghỉ phép
+                                                    </h4>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">×</span>
+                                                    </button>
+                                                </div>
+                                                <form action="" method="post">
+                                                    <div class="modal-body">
+                                                        <div class="form-group row">
+                                                            <label for="inputEmail3" class="col-sm-3 col-form-label">Chọn
+                                                                năm</label>
+                                                            <div class="col-sm-9">
+                                                                <select class="form-control">
+                                                                    <option>2020</option>
+                                                                    <option>2022</option>
+                                                                    <option>2021</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="inputEmail3" class="col-sm-3 col-form-label">Chọn
+                                                                nhân
+                                                                sự</label>
+                                                            <div class="col-sm-9">
+                                                                <select class="form-control">
+                                                                    <option>Trần Văn A - Developer
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="inputEmail3" class="col-sm-3 col-form-label">Chọn
+                                                                nhân
+                                                                sự</label>
+                                                            <div class="col-sm-9">
+                                                                <input type="text" class="form-control" value="18.0">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer justify-content-between">
+                                                        <button type="button" class="btn btn-outline-light" data-dismiss="modal">
+                                                            <i class="fas fa-times"></i> Close
+                                                        </button>
+                                                        <button type="submit" class="btn btn-outline-light">
+                                                            <i class="fas fa-share-square"></i> Save
+                                                            changes
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <!-- /.modal-content -->
+                                        </div>
+                                        <!-- /.modal-dialog -->
+                                    </div>
+                                    <!-- MODAL EDIT END -->
+                                    <a href="#" class="btn btn-danger ml-2">
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                        <tbody class="data" id="2020">
+                            <tr>
+                                <td>1</td>
+                                <td>A09</td>
+                                <td>
+                                    <span class="text-dark font-weight-bold">Show year 2021</span>
+                                </td>
+                                <td>Technology Infomation</td>
+                                <td class="text-info">29.0</td>
+                                <td class="text-danger">3.0</td>
+                                <td class="text-success">28.0</td>
+                                <td class="text-primary">2.0</td>
+                                <td>
+                                    <a href="#" class="btn">
+                                        <i class="fa fa-times text-danger" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <!-- CLICK MODAL EDIT -->
+                                    <a href="#" class="btn btn-success" data-toggle="modal" data-target="#modal-info">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </a>
+                                    <!-- MODAL EDIT START -->
+                                    <div class="modal fade" id="modal-info" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content bg-info">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Chỉnh sửa thông tin nghỉ phép
+                                                    </h4>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">×</span>
+                                                    </button>
+                                                </div>
+                                                <form action="" method="post">
+                                                    <div class="modal-body">
+                                                        <div class="form-group row">
+                                                            <label for="inputEmail3" class="col-sm-3 col-form-label">Chọn
+                                                                năm</label>
+                                                            <div class="col-sm-9">
+                                                                <select class="form-control">
+                                                                    <option>2020</option>
+                                                                    <option>2022</option>
+                                                                    <option>2021</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="inputEmail3" class="col-sm-3 col-form-label">Chọn
+                                                                nhân
+                                                                sự</label>
+                                                            <div class="col-sm-9">
+                                                                <select class="form-control">
+                                                                    <option>Trần Văn A - Developer
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="inputEmail3" class="col-sm-3 col-form-label">Chọn
+                                                                nhân
+                                                                sự</label>
+                                                            <div class="col-sm-9">
+                                                                <input type="text" class="form-control" value="18.0">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer justify-content-between">
+                                                        <button type="button" class="btn btn-outline-light" data-dismiss="modal">
+                                                            <i class="fas fa-times"></i> Close
+                                                        </button>
+                                                        <button type="submit" class="btn btn-outline-light">
+                                                            <i class="fas fa-share-square"></i> Save
+                                                            changes
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <!-- /.modal-content -->
+                                        </div>
+                                        <!-- /.modal-dialog -->
+                                    </div>
+                                    <!-- MODAL EDIT END -->
+                                    <a href="#" class="btn btn-danger ml-2">
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                        <tbody class="data" id="2019">
+                            <tr>
+                                <td>1</td>
+                                <td>A09</td>
+                                <td>
+                                    <span class="text-dark font-weight-bold">Show year 2021</span>
+                                </td>
+                                <td>Technology Infomation</td>
+                                <td class="text-info">29.0</td>
+                                <td class="text-danger">3.0</td>
+                                <td class="text-success">28.0</td>
+                                <td class="text-primary">2.0</td>
+                                <td>
+                                    <a href="#" class="btn">
+                                        <i class="fa fa-times text-danger" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <!-- CLICK MODAL EDIT -->
+                                    <a href="#" class="btn btn-success" data-toggle="modal" data-target="#modal-info">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </a>
+                                    <!-- MODAL EDIT START -->
+                                    <div class="modal fade" id="modal-info" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content bg-info">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Chỉnh sửa thông tin nghỉ phép
+                                                    </h4>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">×</span>
+                                                    </button>
+                                                </div>
+                                                <form action="" method="post">
+                                                    <div class="modal-body">
+                                                        <div class="form-group row">
+                                                            <label for="inputEmail3" class="col-sm-3 col-form-label">Chọn
+                                                                năm</label>
+                                                            <div class="col-sm-9">
+                                                                <select class="form-control">
+                                                                    <option>2020</option>
+                                                                    <option>2022</option>
+                                                                    <option>2021</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="inputEmail3" class="col-sm-3 col-form-label">Chọn
+                                                                nhân
+                                                                sự</label>
+                                                            <div class="col-sm-9">
+                                                                <select class="form-control">
+                                                                    <option>Trần Văn A - Developer
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="inputEmail3" class="col-sm-3 col-form-label">Chọn
+                                                                nhân
+                                                                sự</label>
+                                                            <div class="col-sm-9">
+                                                                <input type="text" class="form-control" value="18.0">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer justify-content-between">
+                                                        <button type="button" class="btn btn-outline-light" data-dismiss="modal">
+                                                            <i class="fas fa-times"></i> Close
+                                                        </button>
+                                                        <button type="submit" class="btn btn-outline-light">
+                                                            <i class="fas fa-share-square"></i> Save
+                                                            changes
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <!-- /.modal-content -->
+                                        </div>
+                                        <!-- /.modal-dialog -->
+                                    </div>
+                                    <!-- MODAL EDIT END -->
+                                    <a href="#" class="btn btn-danger ml-2">
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+
+
+                    </table>
+                </div>
+            </div>
         </div>
-        <h2>Unete al canal</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Atque optio odio officiis nostrum nesciunt quam libero. 
-            Cumque impedit veritatis, quibusdam nulla accusantium illo. 
-            In velit laboriosam obcaecati quaerat eaque beatae.</p>
-    </body>
-    <!-- MAIN JS -->
-    <script src="assets/js/main.js"></script>
+    </div>
+</body>
+<!-- MAIN JS -->
+
+<!-- scrip bt -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/custom.js"></script>
+
 </html>
