@@ -9,3 +9,17 @@
     vertical-align: middle;
     text-align: center;
 }
+
+.content table {
+    margin-top: 30px;
+    box-shadow: -1px 17px 14px -9px rgba(0, 0, 0, 0.5);
+}
+
+.custom-select:focus {
+    border-color: #ced4da;
+}
+
+.n_modal-content {
+    background-color: #65B168!important;
+    color: #F4F9F4;
+}

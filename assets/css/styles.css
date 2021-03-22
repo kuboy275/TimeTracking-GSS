@@ -131,9 +131,9 @@ a {
 .nav__toggle {
     position: absolute;
     top: 1.10rem;
-    right: -.6rem;
-    width: 18px;
-    height: 18px;
+    right: -.7rem;
+    width: 30px;
+    height: 30px;
     background-color: var(--second-color);
     border-radius: 50%;
     font-size: 1.25rem;
@@ -230,5 +230,5 @@ a {
 }
 
 .content {
-    padding-left: 30px;
+    padding-left: 20px;
 }
