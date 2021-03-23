@@ -5,6 +5,11 @@ $(document).ready(function() {
         $('#' + $(this).val()).fadeIn(2000);
     }).change();
 
+    $('#name').on('change', function() {
+        $('.listname').hide();
+        $('#' + $(this).val()).fadeIn(2000);
+    }).change();
+
     $('.delete-item').on('click', function(e) {
         e.preventDefault();
         Swal.fire({
@@ -21,8 +26,8 @@ $(document).ready(function() {
                 Swal.fire('Changes are not saved', '', 'error')
             }
         })
-
     })
+
 
 
 });
