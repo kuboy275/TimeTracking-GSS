@@ -4,7 +4,10 @@ $(document).ready(function() {
         $('.data').hide();
         $('#' + $(this).val()).fadeIn(2000);
     }).change();
-
+    $('#listyear').on('change', function() {
+        $('.listyear').hide();
+        $('#' + $(this).val()).fadeIn(2000);
+    }).change();
     $('#name').on('change', function() {
         $('.listname').hide();
         $('#' + $(this).val()).fadeIn(2000);

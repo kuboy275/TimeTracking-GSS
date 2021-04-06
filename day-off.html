@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- STYLES CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <!-- link bt -->
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- BOX ICONS CSS-->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <title>Sidebar menu</title>
+</head>
+
+<body id="body">
+    <div class="l-navbar" id="navbar">
+        <nav class="nav">
+            <div>
+                <a href="#" class="nav__logo">
+                    <img src="assets/icons/logo.svg" alt="" class="nav__logo-icon">
+                    <span class="nav__logo-text">GSS DASHBOARD</span>
+                </a>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-chevron-right'></i>
+                </div>
+                <ul class="nav__list">
+                    <a href="index.html" class="nav__link ">
+                        <i class='bx bx-grid-alt nav__icon'></i>
+                        <span class="nav__text">Số Ngày Nghỉ</span>
+                    </a>
+                    <a href="./by-month.html" class="nav__link ">
+                        <i class='bx bx-grid-alt nav__icon'></i>
+                        <span class="nav__text">Công theo tháng</span>
+                    </a>
+                    <a href="./by-day.html" class="nav__link">
+                        <i class='bx bx-user nav__icon'></i>
+                        <span class="nav__text">Công theo ngày</span>
+                    </a>
+                    <a href="./time-in-out.html" class="nav__link">
+                        <i class='bx bx-bell nav__icon'></i>
+                        <span class="nav__text">Ngày ra vào</span>
+                    </a>
+                    <a href="day-off.html" class="nav__link active">
+                        <i class='bx bx-user nav__icon'></i>
+                        <span class="nav__text">Nghỉ Phép</span>
+                    </a>
+                    <a href="time-code.html" class="nav__link ">
+                        <i class='bx bx-user nav__icon'></i>
+                        <span class="nav__text">Mã chấm công</span>
+                    </a>
+                    <a href="./time-with-pc.html" class="nav__link">
+                        <i class='bx bx-heart nav__icon'></i>
+                        <span class="nav__text">Thiếp lập ca làm việc nhân viên</span>
+                    </a>
+                    <a href="./all-work-times.html" class="nav__link">
+                        <i class='bx bx-bookmark nav__icon'></i>
+                        <span class="nav__text">Thiếp lập ca làm việc mặc định</span>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+        <div class="container-fluid">
+            <div class="title">
+                Nghỉ phép
+            </div>
+            <div class="top">
+                <div class="row justify-content-between">
+                    <div class="col-4 text-left">
+                        <div class="form-group">
+                            <select id="year" class="form-control custom-select shadow-none">
+                                <option value="2021" selected>Năm 2021</option>
+                                <option value="2020">Năm 2020</option>
+                                <option value="2019">Năm 2019</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-4 text-right">
+                        <div class="card-tools">
+                            <ul class="pagination pagination-sm align-items-center justify-content-end">
+                                <li class="page-item">
+                                    <a href="#" class="btn btn-light blue text-dark">
+                                        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li class="page-item mx-2">
+                                    <a href="#" class="btn">Page 1</a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="btn bg-light text-dark">
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-4 text-right">
+                        <a href="#" class="btn btn-light mr-2">
+                            <i class="fa fa-plus mr-1"></i> Thêm mới
+                        </a>
+
+                        <a href="#" class="btn btn-light">
+                            <i class="fa fa-file mr-1" aria-hidden="true"></i> Import file
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="col-12">
+                    <div class="row">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th style="width: 8%;">Ký hiệu</th>
+                                    <th style="width: 25%;">Tên gọi</th>
+                                    <th style="width: 10%;">Ngày</th>
+                                    <th style="width: 10%;">Hệ số tăng ca</th>
+                                    <th style="width: 37% ">Ghi chú </th>
+                                    <th style="width: 10%;">
+                                        <a href="#" class="btn btn-info" data-toggle="modal" data-target="#modal-info">
+                                            <i class="fa fa-plus mr-1" aria-hidden="true"></i> Thêm
+                                        </a>
+                                    </th>
+
+                                </tr>
+                            </thead>
+
+                            <tr>
+                                <tbody class="data" id="2021">
+                                    <td>TETDL</td>
+                                    <td>Tết Dương Lịch 2021</td>
+                                    <td>01/01/2021</td>
+                                    <td>3</td>
+                                    <td></td>
+                                    <td>
+                                        <a href="#" class="btn btn-success" data-toggle="modal" data-target="#modal-info">
+                                            <i class="fas fa-pencil-alt"></i>
+                                        </a>
+                                        <a href="#" class="btn btn-danger delete-item">
+                                            <i class="fa fa-trash " aria-hidden="true"></i>
+                                        </a>
+                                    </td>
+                                </tbody>
+                                <tbody class="data" id="2020">
+                                    <td>TETDL</td>
+                                    <td>Tết Dương Lịch 2020</td>
+                                    <td>01/01/2020</td>
+                                    <td>3</td>
+                                    <td></td>
+                                    <td>
+                                        <a href="#" class="btn btn-success" data-toggle="modal" data-target="#modal-info">
+                                            <i class="fas fa-pencil-alt"></i>
+                                        </a>
+                                        <a href="#" class="btn btn-danger delete-item">
+                                            <i class="fa fa-trash " aria-hidden="true"></i>
+                                        </a>
+                                    </td>
+                                </tbody>
+                                <tbody class="data" id="2019">
+                                    <td>TETDL</td>
+                                    <td>Tết Dương Lịch 2019</td>
+                                    <td>01/01/2019</td>
+                                    <td>3</td>
+                                    <td></td>
+                                    <td>
+                                        <a href="#" class="btn btn-success" data-toggle="modal" data-target="#modal-info">
+                                            <i class="fas fa-pencil-alt"></i>
+                                        </a>
+                                        <a href="#" class="btn btn-danger delete-item  ">
+                                            <i class="fa fa-trash " aria-hidden="true"></i>
+                                        </a>
+                                    </td>
+                                </tbody>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal-info" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content t_modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Thêm mới từ điển</h4>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <form action="" method="post">
+                    <div class="modal-body">
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-4 col-form-label">Kí hiệu</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" value="18.0">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-4 col-form-label">Tên gọi
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" value="18.0">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-4 col-form-label">Ngày bắt
+                                đầu</label>
+                            <div class="col-sm-8">
+                                <div class="input-group align-items-center"></div>
+                                <input type="date" class="form-control" name="">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-4 col-form-label">Ngày kết
+                                thúc</label>
+                            <div class="col-sm-8">
+                                <div class="input-group align-items-center"></div>
+                                <input type="date" class="form-control" name="">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-4 col-form-label">Hệ số tăng
+                                ca</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" value="18.0">
+                            </div>
+                        </div>
+
+
+                        <div class="modal-footer justify-content-between">
+                            <button type="button" class="btn bg-light text-success border font-weight-bold px-3" data-dismiss="modal">
+                                <i class="fas fa-times"></i> Đóng
+                            </button>
+                            <button type="submit" class="btn btn-success font-weight-bold  px-3">
+                                <i class="fas fa-share-square"></i> Lưu thay đổi
+                            </button>
+                        </div>
+
+                </form>
+
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+</body>
+<!-- MAIN JS -->
+
+<!-- scrip bt -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js "></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js "></script>
+<script src="./assets/js/sweetalert2@10.js"></script>
+<script src="assets/js/main.js "></script>
+<script src="assets/js/custom.js "></script>
+
+</html>

@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- STYLES CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <!-- link bt -->
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- BOX ICONS CSS-->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <title>Sidebar menu</title>
+</head>
+
+<body id="body">
+    <div class="l-navbar" id="navbar">
+        <nav class="nav">
+            <div>
+                <a href="#" class="nav__logo">
+                    <img src="assets/icons/logo.svg" alt="" class="nav__logo-icon">
+                    <span class="nav__logo-text">GSS DASHBOARD</span>
+                </a>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-chevron-right'></i>
+                </div>
+                <ul class="nav__list">
+                    <a href="index.html" class="nav__link ">
+                        <i class='bx bx-grid-alt nav__icon'></i>
+                        <span class="nav__text">Số Ngày Nghỉ</span>
+                    </a>
+                    <a href="./by-month.html" class="nav__link ">
+                        <i class='bx bx-grid-alt nav__icon'></i>
+                        <span class="nav__text">Công theo tháng</span>
+                    </a>
+                    <a href="./by-day.html" class="nav__link">
+                        <i class='bx bx-user nav__icon'></i>
+                        <span class="nav__text">Công theo ngày</span>
+                    </a>
+                    <a href="./time-in-out.html" class="nav__link">
+                        <i class='bx bx-bell nav__icon'></i>
+                        <span class="nav__text">Ngày ra vào</span>
+                    </a>
+                    <a href="day-off.html" class="nav__link ">
+                        <i class='bx bx-user nav__icon'></i>
+                        <span class="nav__text">Nghỉ Phép</span>
+                    </a>
+                    <a href="time-code.html" class="nav__link ">
+                        <i class='bx bx-user nav__icon'></i>
+                        <span class="nav__text">Mã chấm công</span>
+                    </a>
+                    <a href="./time-with-pc.html" class="nav__link active">
+                        <i class='bx bx-heart nav__icon'></i>
+                        <span class="nav__text">Thiếp lập ca làm việc nhân viên</span>
+                    </a>
+                    <a href="./all-work-times.html" class="nav__link">
+                        <i class='bx bx-bookmark nav__icon'></i>
+                        <span class="nav__text">Thiếp lập ca làm việc mặc định</span>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+        <div class="container-fluid">
+            <div class="title">
+                Thiết lập giờ làm việc mặc định:
+            </div>
+
+
+            <div class="row align-items-baseline">
+                <div class="col-4">
+                    <div class="form-group">
+                        <select id="inputStatus" class="form-control custom-select">
+                                <option selected="" disabled="">Chọn đơn vị, bộ phận</option>
+                                <option>Tài khoản thanh toán</option>
+                                <option>Trung tâm Truyền Thông đa phương tiện</option>
+                                <option>PR</option>
+                                <option>Media</option>
+                            </select>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <select id="name" class="form-control custom-select">
+                                <option disabled=""> Danh sách nhân viên </option>
+                                <option value="danh" selected> Hoàng Thanh Danh </option>
+                                <option value="trung">Lê Trung</option>
+                                <option value="nghia">Nghĩa Lẻ</option>
+                                <option value="nhy">Nhỷ SH</option>
+                                <option value="khanh">Khánh</option>
+                                <option value="nhien">Nhiên</option>
+                            </select>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="input-group border rounded">
+                        <div class="input-group input-group-sm">
+                            <input class="form-control form-control-navbar" placeholder="Search họ tên nếu có">
+                            <div class="input-group-append">
+                                <button class="btn btn-navbar" type="submit">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-9 text-right">
+                    <div class="card-tools">
+                        <ul class="pagination pagination-sm align-items-center justify-content-end">
+                            <li class="page-item">
+                                <a href="#" class="btn btn-light blue text-dark">
+                                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li class="page-item mx-2">
+                                <a href="#" class="btn">Tháng 12 - Tuần 2</a>
+                            </li>
+                            <li class="page-item">
+                                <a href="#" class="btn bg-light text-dark">
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-3 text-right">
+                    <!-- BUTTON CLICK MODAL -->
+                    <a href="#" class="btn btn-light" data-toggle="modal" data-target="#modal-sm">
+                        <i class="fas fa-plus mr-1"></i> Tạo bảng tổng hợp nghỉ phép
+                    </a>
+
+                    <!-- MODAL CONTENT CREATE START -->
+                    <div class="modal fade show" id="modal-sm" aria-modal="true" role="dialog">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" style="text-align: center;">Bảng tổng hợp nghỉ phép</h4>
+                                </div>
+                                <form action="" method="">
+                                    <div class="modal-body">
+                                        <div class="form-group text-left">
+                                            <label class="">Chọn năm</label>
+                                            <select class="form-control ">
+                                                    <option selected="" disabled>Chọn năm</option>
+                                                    <option>2020</option>
+                                                    <option>2022</option>
+                                                    <option>2021</option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer justify-content-between">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                <i class="fas fa-times"></i> Close
+                                            </button>
+                                        <button type="button" class="btn btn-primary">
+                                                <i class="fas fa-share-square"></i> Save changes
+                                            </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- MODAL CONTENT CREATE END -->
+                </div>
+            </div>
+            <!-- TABLE -->
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th><span>Thứ hai</span> <br>
+                                    <p> 23/12/2021 </p>
+                                </th>
+                                <th><span>Thứ ba</span> <br>
+                                    <p> 23/12/2021 </p>
+                                </th>
+                                <th><span>Thứ tư</span> <br>
+                                    <p> 23/12/2021 </p>
+                                </th>
+
+                                <th><span>Thứ năm</span> <br>
+                                    <p> 23/12/2021 </p>
+                                </th>
+                                <th><span>Thứ sáu</span> <br>
+                                    <p> 23/12/2021 </p>
+                                </th>
+                                <th><span>Thứ bảy</span> <br>
+                                    <p> 23/12/2021 </p>
+                                </th>
+                                <th><span class="text-danger">Chủ Nhật</span> <br>
+                                    <p> 23/12/2021 </p>
+                                </th>
+
+                                <th><span>Action</span></th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="listname" id="danh">
+                            <tr>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+
+
+                                <td>
+                                    <a href="#" class="btn btn-success" data-toggle="modal" data-target="#modal-light">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-danger delete-item">
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+
+                            </tr>
+                        </tbody>
+
+                        <tbody class="listname" id="trung">
+                            <tr>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+
+
+                                <td>
+                                    <a href="#" class="btn btn-success" data-toggle="modal" data-target="#modal-info">
+                                        <i class="fas fa-pencil-alt"></i>
+
+                                    </a>
+                                    <a href="#" class="btn btn-danger delete-item">
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+
+                            </tr>
+                        </tbody>
+
+                        <tbody class="listname" id="nghia">
+                            <tr>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+
+
+                                <td>
+                                    <a href="#" class="btn btn-success" data-toggle="modal" data-target="#modal-info">
+                                        <i class="fas fa-pencil-alt"></i>
+
+                                    </a>
+                                    <a href="#" class="btn btn-danger delete-item">
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                        <tbody class="listname" id="nhy">
+                            <tr>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+
+
+                                <td>
+                                    <a href="#" class="btn btn-success" data-toggle="modal" data-target="#modal-info">
+                                        <i class="fas fa-pencil-alt"></i>
+
+                                    </a>
+                                    <a href="#" class="btn btn-danger delete-item">
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+
+                            </tr>
+                        </tbody>
+
+                        <tbody class="listname" id="khanh">
+                            <tr>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+
+
+                                <td>
+                                    <a href="#" class="btn btn-success" data-toggle="modal" data-target="#modal-info">
+                                        <i class="fas fa-pencil-alt"></i>
+
+                                    </a>
+                                    <a href="#" class="btn btn-danger delete-item">
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                        <tbody class="listname" id="nhien">
+                            <tr>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+                                <td class="text-success">
+                                    <div class="time">
+                                        <span>08:30</span>
+                                        <div class="line">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </div>
+                                        <span>5:30</span>
+                                    </div>
+                                </td>
+
+
+                                <td>
+                                    <a href="#" class="btn btn-success" data-toggle="modal" data-target="#modal-info">
+                                        <i class="fas fa-pencil-alt"></i>
+
+                                    </a>
+                                    <a href="#" class="btn btn-danger delete-item">
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- content -->
+</body>
+<!-- MAIN JS -->
+
+<!-- scrip bt -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="./assets/js/sweetalert2@10.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/custom.js"></script>
+
+</html>

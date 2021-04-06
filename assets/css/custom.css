@@ -23,3 +23,21 @@
     background-color: #65B168!important;
     color: #F4F9F4;
 }
+
+
+
+
+.container-fluid .col-3 {
+    display: flex;
+}
+.col-3 h2{
+    font-size: 1rem;
+    padding-top: 10px;
+}
+
+/* s */
+
+.t_modal-content {
+    background-color: #65B168!important;
+    color: #F4F9F4;
+}
